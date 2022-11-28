@@ -51,4 +51,35 @@ $(function () {
   setInterval(function() {
     updateTime();
   },10000);
+  //on refresh load data
+  $(document).ready(function () {
+    var timeBlock = $('.time-block')
+    if(localStorage["9AM"] !== null && localStorage["9AM"] !== undefined) {
+      timeBlock[0].children[1].append(localStorage.getItem(["9AM"]))
+    }
+    if(localStorage["10AM"] !== null && localStorage["10AM"] !== undefined) {
+      timeBlock[1].children[1].append(localStorage.getItem(["10AM"]))
+    }
+    if(localStorage["11AM"] !== null && localStorage["11AM"] !== undefined) {
+      timeBlock[2].children[1].append(localStorage.getItem(["11AM"]))
+    }
+    if(localStorage["12PM"] !== null && localStorage["12PM"] !== undefined) {
+      timeBlock[3].children[1].append(localStorage.getItem(["12PM"]))
+    }
+    if(localStorage["1PM"] !== null && localStorage["1PM"] !== undefined) {
+      timeBlock[4].children[1].append(localStorage.getItem(["1PM"]))
+    }
+    if(localStorage["2PM"] !== null && localStorage["2PM"] !== undefined) {
+      timeBlock[5].children[1].append(localStorage.getItem(["2PM"]))
+    }
+    if(localStorage["3PM"] !== null && localStorage["3PM"] !== undefined) {
+      timeBlock[6].children[1].append(localStorage.getItem(["3PM"]))
+    }
+    if(localStorage["4PM"] !== null && localStorage["4PM"] !== undefined) {
+      timeBlock[7].children[1].append(localStorage.getItem(["4PM"]))
+    }
+    if(localStorage["5PM"] !== null && localStorage["5PM"] !== undefined) {
+      timeBlock[8].children[1].append(localStorage.getItem(["5PM"]))
+    }
+  });
 });
